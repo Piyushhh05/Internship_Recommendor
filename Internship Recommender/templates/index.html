@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PM Internship Recommendation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Find Best Internship For You</h2>
+
+    <label>Education</label>
+    <select id="education">
+        <option>BCA</option>
+        <option>BSc</option>
+        <option>BTech</option>
+        <option>MCA</option>
+    </select>
+
+<label>Skills</label>
+<div class="skills-grid">
+    <div class="skill-card" data-skill="Python">🐍 Python</div>
+    <div class="skill-card" data-skill="HTML">🌐 HTML</div>
+    <div class="skill-card" data-skill="CSS">🎨 CSS</div>
+    <div class="skill-card" data-skill="JavaScript">⚡ JavaScript</div>
+    <div class="skill-card" data-skill="SQL">🗄️ SQL</div>
+    <div class="skill-card" data-skill="ML">🤖 ML</div>
+    <div class="skill-card" data-skill="Excel">📊 Excel</div>
+    <div class="skill-card" data-skill="CyberSecurity">🤖 CyberSecurity</div>
+    <div class="skill-card" data-skill="Cloud">💭 Cloud</div>
+    <div class="skill-card" data-skill="Data Science">📈 Data Science</div>
+</div>
+
+<div class="confidence-box">
+    <div class="confidence-label">Skill Confidence</div>
+    <div class="confidence-bar">
+        <div class="confidence-fill"></div>
+    </div>
+</div>
+
+
+ <label>Interest</label>
+<div class="interest-grid">
+    <div class="interest-card active" data-interest="IT">💻 IT</div>
+    <div class="interest-card" data-interest="Analytics">📊 Analytics</div>
+    <div class="interest-card" data-interest="AI">🤖 AI</div>
+</div>
+
+
+    <label>Preferred Location</label>
+    <input type="text" id="location" placeholder="Any / City name">
+
+    <button onclick="getRecommendations()">Get Recommendations</button>
+
+
+<div class="ai-ring-container">
+    <svg class="progress-ring" width="120" height="120">
+        <circle class="progress-ring-bg" cx="60" cy="60" r="52"/>
+        <circle class="progress-ring-fill" cx="60" cy="60" r="52"/>
+    </svg>
+
+    <!-- CENTER TEXT -->
+    <div class="ring-score" id="ringScore">0%</div>
+    <div class="ring-text">AI Match</div>
+</div>
+
+<div class="ai-explain-box" id="aiExplainBox">
+    <h4>🧠 Why this recommendation?</h4>
+    <p id="aiExplainText">
+        Select your details and click Get Recommendations.
+    </p>
+</div>
+
+<button class="report-btn" onclick="downloadReport()">
+    📄 Download AI Match Report
+</button>
+
+
+
+
+    <div id="results"></div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
